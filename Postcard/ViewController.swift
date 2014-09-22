@@ -28,6 +28,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func email(sender: AnyObject) {
+        // PROBANDO MODIFICACIONES
+        
         mensaje_etiqueta.text=mensaje.text
         mensaje.text=""
         mensaje.resignFirstResponder()// oculta el teclado
