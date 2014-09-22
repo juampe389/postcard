@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var mensaje_etiqueta: UILabel!
+    
+    @IBOutlet var nombre: UITextField!
+    
+    @IBOutlet var mensaje: UITextField!
+    @IBOutlet var emailbotton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +27,13 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func email(sender: AnyObject) {
+        mensaje_etiqueta.text=mensaje.text
+        mensaje.text=""
+        mensaje.resignFirstResponder()// oculta el teclado
+        mensaje_etiqueta.textColor=UIColor.redColor()
+        emailbotton.setTitle("mail enviado", forState: UIControlState.Normal)
+        
+    }
 }
 
